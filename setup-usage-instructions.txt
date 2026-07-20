@@ -1,0 +1,27 @@
+cd C:\Users\avkar\OneDrive\Projects\browser-control
+
+# Create the venv
+python -m venv .venv
+
+# Activate it (PowerShell)
+.venv\Scripts\activate
+
+pip install browser-use langchain-google-genai python-dotenv
+pip install playwright
+python -m playwright install chromium
+
+# usage instructions
+# Default (Gemini Flash free tier)
+python sample-agent.py
+
+# Specific Gemini model
+python sample-agent.py gemini-2.0-flash
+
+# Ollama with default (gemma4)
+python sample-agent.py ollama
+
+# Ollama with specific models you have
+python sample-agent.py ollama:gemma4
+python sample-agent.py ollama:qwen3.5
+python sample-agent.py ollama:gpt-oss:20b
+python sample-agent.py ollama:qwen3:14b

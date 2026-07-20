@@ -1,0 +1,2 @@
+# This file ensures the shots/ directory is tracked by git.
+# Actual screenshots (shots/*.png) are gitignored.

@@ -1,0 +1,16 @@
+services:
+  agent-service:
+    build: .
+    container_name: agent-service
+    ports:
+      - "${PORT:-8765}:8765"
+    env_file:
+      - .env
+    environment:
+      - DISPLAY=:99
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    shm_size: '2gb'          # ← CRITICAL — Chromium crashes without this
+    extra_hosts:
+      - "homeassistant.local:192.168.2.150"   # ← so agent can reach HA
+    restart: unless-stopped
