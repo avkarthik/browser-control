@@ -69,8 +69,8 @@ OpenAPI docs at `http://localhost:8765/docs`. See [`docs/agent-service.md`](./do
 
 Full documentation lives in [`docs/`](./docs/). Start at [`docs/README.md`](./docs/README.md) for an index, or jump straight to:
 
+- [`AGENTS.md`](./AGENTS.md) — **dense quickstart for LLMs/coding agents** (gotchas, file map, conventions).
 - [`docs/architecture.md`](./docs/architecture.md) — system overview, components, request lifecycle.
-- [`docs/AGENTS.md`](./docs/AGENTS.md) — **dense quickstart for LLMs/coding agents** (gotchas, file map, conventions).
 - [`docs/agent-service.md`](./docs/agent-service.md) — FastAPI endpoints, schemas, pause/resume/stop lifecycle.
 - [`docs/sample-agent.md`](./docs/sample-agent.md) — CLI usage and provider arguments.
 - [`docs/watch.md`](./docs/watch.md) — webpage watcher configuration.

@@ -67,7 +67,7 @@ Both `sample-agent.py` and `agent-service/app/services/llm_service.py` have a `g
 
 The service wraps this with `resolve_provider_arg(provider, provider_model)` which combines the `TaskRequest` `Literal` provider + optional model override into that string. **Keep both `get_llm` implementations in sync** when adding a provider.
 
-Non-Gemini providers get a Gemini fallback (`get_fallback_llm()` → `ChatGoogle(model=settings.gemini_fallback_model)`). The fallback condition differs slightly between the CLI and the service — see [`llm-providers.md`](./llm-providers.md#fallback-strategy).
+Non-Gemini providers get a Gemini fallback (`get_fallback_llm()` → `ChatGoogle(model=settings.gemini_fallback_model)`). The fallback condition differs slightly between the CLI and the service — see [`llm-providers.md`](./docs/llm-providers.md#fallback-strategy).
 
 ## Search-engine override
 
@@ -77,7 +77,7 @@ Non-Gemini providers get a Gemini fallback (`get_fallback_llm()` → `ChatGoogle
 
 - Two `.env` files: root (for `sample-agent.py`) and `agent-service/.env` (for the service). Both are gitignored.
 - `.env.example` files are committed with placeholder values — update them when you add a new env var.
-- Full var reference: [`environment.md`](./environment.md).
+- Full var reference: [`environment.md`](./docs/environment.md).
 - Minimum to run the service: `GOOGLE_API_KEY`, `WAHA_URL`, `WHATSAPP_CHAT_ID`.
 
 ## How to verify your changes
@@ -110,11 +110,11 @@ There's no test suite (`package.json` has the default `npm test` that just error
 
 ## Pointers
 
-- Architecture overview: [`architecture.md`](./architecture.md)
-- Service deep dive: [`agent-service.md`](./agent-service.md)
-- CLI usage: [`sample-agent.md`](./sample-agent.md)
-- Watcher: [`watch.md`](./watch.md)
-- LLM providers: [`llm-providers.md`](./llm-providers.md)
-- WhatsApp: [`whatsapp-integration.md`](./whatsapp-integration.md)
-- Docker: [`deployment.md`](./deployment.md)
-- Env vars: [`environment.md`](./environment.md)
+- Architecture overview: [`architecture.md`](./docs/architecture.md)
+- Service deep dive: [`agent-service.md`](./docs/agent-service.md)
+- CLI usage: [`sample-agent.md`](./docs/sample-agent.md)
+- Watcher: [`watch.md`](./docs/watch.md)
+- LLM providers: [`llm-providers.md`](./docs/llm-providers.md)
+- WhatsApp: [`whatsapp-integration.md`](./docs/whatsapp-integration.md)
+- Docker: [`deployment.md`](./docs/deployment.md)
+- Env vars: [`environment.md`](./docs/environment.md)

@@ -14,7 +14,7 @@ Welcome to the `browser-control` documentation. This folder is the canonical ref
 | Set up WhatsApp via WAHA | [`whatsapp-integration.md`](./whatsapp-integration.md) |
 | Deploy with Docker | [`deployment.md`](./deployment.md) |
 | See every environment variable | [`environment.md`](./environment.md) |
-| Make changes quickly as an agent/LLM | [`AGENTS.md`](./AGENTS.md) |
+| Make changes quickly as an agent/LLM | [`AGENTS.md`](../AGENTS.md) |
 
 ## Project in one paragraph
 
